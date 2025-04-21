@@ -25,7 +25,7 @@ def english_to_morse(
     
     
 
-    with open(input_file, "r", encoding = "utf-8") as f:
+    with open(input_file, "r") as f:
         text = f.read()
         text = text.upper()
         words = text.split()
@@ -36,7 +36,7 @@ def english_to_morse(
 
     morse_text = '\n'.join(morse_words)
 
-    with open(output_file, "w", encoding="utf-8") as f:
+    with open(output_file, "w") as f:
         f.write(morse_text)
 
 
